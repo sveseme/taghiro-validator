@@ -29,6 +29,19 @@ function sendMail(mail:string & Email) {
 
 ## Implementation
 
+taghiro-validator supports valadation that can be used as tag types.
+
 Supported
 
 - Email
+- CreditCard
+- Currency
+- DataUri
+- FQDN
+- Hash
+- HexColor
+- Ip
+- Isbn
+- Issn
+- Isin
+- MimeType
