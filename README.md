@@ -2,7 +2,7 @@
 
 **Validator integration for taghiro**
 
-Integration library for taghiro with validator.
+Integration library for [taghiro](https://github.com/StephanSchmidt/taghiro) with [validator.js](https://github.com/chriso/validator.js/).
 
 ## Install
 
