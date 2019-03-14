@@ -26,3 +26,9 @@ function sendMail(mail:string & Email) {
     ...
 }
 ```
+
+## Implementation
+
+Supported
+
+- Email
