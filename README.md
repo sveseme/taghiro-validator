@@ -2,8 +2,6 @@
 
 **Validator integration for taghiro**
 
-[![CircleCI](https://circleci.com/gh/StephanSchmidt/taghiro-validator.svg?style=svg)](https://circleci.com/gh/StephanSchmidt/taghiro-validator)
-
 Integration library for [taghiro](https://github.com/StephanSchmidt/taghiro) with [validator.js](https://github.com/chriso/validator.js/).
 
 ## Install

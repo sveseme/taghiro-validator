@@ -7,7 +7,8 @@
     "build": "tsc",
     "test": "jest",
     "lint": "tslint -p tsconfig.json -c tslint.json",
-    "test:ci": "npm-run-all lint test"
+    "test:ci": "npm-run-all lint test",
+    "pre-push": "npm-run-all build lint test"
   },
   "keywords": [
     "typescript"
