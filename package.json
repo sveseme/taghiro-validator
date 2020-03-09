@@ -1,7 +1,7 @@
 {
   "name": "taghiro-validator",
-  "version": "0.1.1",
-  "description": "Validator integration for taghiro",
+  "version": "0.2.0",
+  "description": "Validator integration and validation with taghiro",
   "main": "lib/index.js",
   "scripts": {
     "build": "tsc",
