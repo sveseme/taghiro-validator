@@ -8,6 +8,7 @@
     "test": "jest",
     "lint": "tslint -p tsconfig.json -c tslint.json",
     "test:ci": "npm-run-all lint test",
+    "test:cov": "jest --coverage",
     "pre-push": "npm-run-all build lint test"
   },
   "keywords": [
