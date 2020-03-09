@@ -1,6 +1,10 @@
 import * as validator from "validator";
 import { Tag } from "taghiro";
 
+export * from "./validator/results";
+export * from "./validator/strings";
+export * from "./validator/validator";
+
 export type Email = Tag<"email">;
 
 export function isEmail(value: string): value is string & Email {

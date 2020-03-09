@@ -1,6 +1,6 @@
-import { Result } from './results';
-import { validate, ErrorMessage } from './validator';
-import { NonEmpty, isNotEmpty } from 'taghiro';
+import { Result } from "./results";
+import { validate, ErrorMessage } from "./validator";
+import { NonEmpty, isNotEmpty } from "taghiro";
 
 export { vNotEmpty };
 

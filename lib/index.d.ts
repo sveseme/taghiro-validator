@@ -1,4 +1,7 @@
 import { Tag } from "taghiro";
+export * from "./validator/results";
+export * from "./validator/strings";
+export * from "./validator/validator";
 export declare type Email = Tag<"email">;
 export declare function isEmail(value: string): value is string & Email;
 export declare type CreditCard = Tag<"credit-card">;
@@ -26,4 +29,3 @@ export declare type Isin = Tag<"isin">;
 export declare function isIsin(value: string): value is string & Isin;
 export declare type MimeType = Tag<"mime-type">;
 export declare function isMimeType(value: string): value is string & MimeType;
-export {};

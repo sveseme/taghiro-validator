@@ -6,10 +6,7 @@ type ErrorMessage = string;
 
 class ValidationFailure extends Failure<ErrorMessage> {}
 
-function validate<T, U extends T>(
-  v: T,
-  fn: (v: T) => v is U,
-): Result<U, ErrorMessage> {
+function validate<T, U extends T>(v: T, fn: (v: T) => v is U): Result<U, ErrorMessage> {
   if (fn(v)) {
     return new Success((v as unknown) as U);
   } else {
@@ -29,17 +26,7 @@ function vDefined<T>(value: T): Result<T, ErrorMessage> {
 // https://www.freecodecamp.org/news/typescript-curry-ramda-types-f747e99744ab/
 
 function withGood<A, E, T1, T2, T3, T4, T5, T6, T7, T8, T9>(
-  fn: (
-    v1?: T1,
-    v2?: T2,
-    v3?: T3,
-    v4?: T4,
-    v5?: T5,
-    v6?: T6,
-    v7?: T7,
-    v8?: T8,
-    v9?: T9,
-  ) => A,
+  fn: (v1?: T1, v2?: T2, v3?: T3, v4?: T4, v5?: T5, v6?: T6, v7?: T7, v8?: T8, v9?: T9) => A,
   v1?: Result<T1, E>,
   v2?: Result<T2, E>,
   v3?: Result<T3, E>,
@@ -64,23 +51,13 @@ function withGood<A, E, T1, T2, T3, T4, T5, T6, T7, T8, T9>(
     return x !== undefined;
   });
 
-  const allSuccess = args.length == args.filter(x => x!.isSuccess()).length;
+  const allSuccess = args.length === args.filter(x => x!.isSuccess()).length;
 
   if (allSuccess) {
     return new Success(
-      fn(
-        value(v1),
-        value(v2),
-        value(v3),
-        value(v4),
-        value(v5),
-        value(v6),
-        value(v7),
-        value(v8),
-        value(v9),
-      ),
+      fn(value(v1), value(v2), value(v3), value(v4), value(v5), value(v6), value(v7), value(v8), value(v9)),
     );
   } else {
-    return new Many(args.filter(x => !x!.isSuccess()) as Failure<E>[]);
+    return new Many(args.filter(x => !x!.isSuccess()) as Array<Failure<E>>);
   }
 }
